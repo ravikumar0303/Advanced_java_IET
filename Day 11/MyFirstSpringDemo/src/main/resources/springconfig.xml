@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+	xmlns:context="http://www.springframework.org/schema/context">
+	
+	<bean id="hw" class="com.demo.beans.HelloWorld"></bean>
+	<!-- Setter injection -->
+	<bean id="u1" class="com.demo.beans.MyUser" scope="prototype">
+	     <property name="uid" value="100"></property>
+	     <property name="uname" value="Kishori"></property>
+	     <property name="email" value="DASASDF@DFSD"></property>
+	</bean>
+	<bean id="addr" class="com.demo.beans.Address">
+	   <constructor-arg index="0" value="34"></constructor-arg>
+	   <constructor-arg index="1" value="Baner"></constructor-arg>
+	   <constructor-arg index="2" value="Pune"></constructor-arg>
+	</bean>
+	<bean id="p1" class="com.demo.beans.Player">
+	   <property name="pid" value="1"></property>
+	   <property name="pname" value="Dhoni"></property>
+	</bean>
+	<bean id="player2" class="com.demo.beans.Player">
+	   <property name="pid" value="2"></property>
+	   <property name="pname" value="Virat"></property>
+	</bean>
+	<bean id="t1" class="com.demo.beans.Team" autowire="byName">
+	<property name="tid" value="1"></property>
+	<property name="name" value="2"></property>
+	<!-- <property name="p1" ref="player1"></property> -->
+	</bean>
+	
+</beans>
