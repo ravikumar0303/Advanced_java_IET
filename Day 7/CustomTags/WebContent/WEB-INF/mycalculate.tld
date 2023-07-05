@@ -1,0 +1,41 @@
+<taglib>
+  <tlib-version>1.1</tlib-version>
+  <jsp-version>1.1</jsp-version>
+	<tag>
+   		<name>mycalculate</name>
+   <tag-class>com.demo.tags.CalculateTag</tag-class>
+<attribute>
+   <name>num1</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+
+</attribute>
+<attribute>
+   <name>num2</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+
+</attribute>
+
+
+</tag>
+<tag>
+   	 <name>myhello</name>
+     <tag-class>com.demo.tags.MyHello</tag-class>
+	<attribute>
+	   <name>fname</name>
+	   <required>true</required>
+	   <rtexprvalue>true</rtexprvalue>
+	
+	</attribute>
+	<attribute>
+	   <name>lname</name>
+	   <required>true</required>
+	   <rtexprvalue>true</rtexprvalue>
+	
+	</attribute>
+
+
+</tag>
+
+</taglib>
